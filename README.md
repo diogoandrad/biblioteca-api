@@ -37,4 +37,4 @@ Descrição:
  
  Em seguida, no angular criei a model para indentificar o tipo de cada atributo recebido da entidade. E criei a conexão com api na service, declarando a url usada para obter as requisições e fazendo cada função de acordo com as chamadas.
 
- Então, ainda no frontend, criei o component, declarei as rotas e assim fui desenvolvendo o layout.
+ Então, ainda no frontend, criei o component, declarei as rotas, instalei os pacotes usados para bootstrap e assim fui desenvolvendo o layout.
