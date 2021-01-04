@@ -36,3 +36,5 @@ Descrição:
  Na Startup.cs declarei nas configure o uso dos pacotes instalados, informando onde está localizado as informações do banco e indicando os services usados e permitindo que o angular tenha acesso ao http da api(Cors).
  
  Em seguida, no angular criei a model para indentificar o tipo de cada atributo recebido da entidade. E criei a conexão com api na service, declarando a url usada para obter as requisições e fazendo cada função de acordo com as chamadas.
+
+ Então, ainda no frontend, criei o component, declarei as rotas e assim fui desenvolvendo o layout.
