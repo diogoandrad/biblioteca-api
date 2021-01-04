@@ -15,7 +15,7 @@ Requisitos:
  * PostgreSQL 12
  * Visual Studio 2019
  
-Compilar:
+Executar:
 
  * Ajustar sua configuração de banco em appsettings.json > DbConnection
  * Abrir projeto no Visual Studio
