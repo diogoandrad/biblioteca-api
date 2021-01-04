@@ -11,7 +11,6 @@ Ferramentas:
 Requisitos:
 
  * SDK .Net Core 3.1
- * NodeJS
  * Angular 11
  * PostgreSQL 12
  * Visual Studio 2019
