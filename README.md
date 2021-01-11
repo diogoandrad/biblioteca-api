@@ -17,11 +17,13 @@ Requisitos:
  
 Executar:
 
+ * Abrir Back-end no Visual Studio
  * Ajustar sua configuração de banco em appsettings.json > DbConnection
- * Abrir projeto no Visual Studio
- * No diretório project rodar update-database
- * No diretório project Build
- * No diretório Front-end rodar ng serve --open
+ * Rodar 'update-database'
+ * Então 'Build'
+ * Abrir Front-end no Visual Studio Code
+ * Rodar 'npm install'
+ * Rodar 'ng serve --open'
 
 Descrição:
 
