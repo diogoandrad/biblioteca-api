@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Backend</name>
+    </assembly>
+    <members>
+        <member name="T:Backend.Controllers.v1.BookController">
+            <summary>
+            API RestFull, CRUD of Books
+            </summary>
+        </member>
+        <member name="M:Backend.Controllers.v1.BookController.#ctor(Backend.Services.IBookService)">
+            <summary>
+            Add Services
+            </summary>
+            <param name="service">Services</param>
+        </member>
+        <member name="M:Backend.Controllers.v1.BookController.GetBooks">
+            <summary>
+            Returns list of all books
+            </summary>
+            <returns>Books</returns>
+        </member>
+        <member name="M:Backend.Controllers.v1.BookController.GetById(System.Guid)">
+            <summary>
+            Returns unique books
+            </summary>
+            <returns>Book</returns>
+        </member>
+        <member name="M:Backend.Controllers.v1.BookController.AddBook(Backend.Models.Book)">
+            <summary>
+            Add new book
+            </summary>
+            <param name="book">It's a book!</param>
+        </member>
+        <member name="M:Backend.Controllers.v1.BookController.UpdateBook(System.Guid,Backend.Models.Book)">
+            <summary>
+            Edit a book
+            </summary>
+            <param name="id"></param>
+            <param name="book">It's a book!</param>
+        </member>
+        <member name="M:Backend.Controllers.v1.BookController.DeleteBook(System.Guid)">
+            <summary>
+            Delete a book
+            </summary>
+        </member>
+    </members>
+</doc>
