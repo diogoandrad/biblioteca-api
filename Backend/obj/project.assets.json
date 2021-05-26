@@ -1267,11 +1267,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Diogo\\Documents\\Development\\ProjetoIndra\\CrudLivrosBackend\\Backend\\Backend.csproj",
       "projectName": "Backend",
       "projectPath": "C:\\Users\\Diogo\\Documents\\Development\\ProjetoIndra\\CrudLivrosBackend\\Backend\\Backend.csproj",
       "packagesPath": "C:\\Users\\Diogo\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Diogo\\Documents\\Development\\ProjetoIndra\\CrudLivrosBackend\\Backend\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\Diogo\\Documents\\ProjetoIndra\\Backend\\Backend.csproj",
+      "projectName": "Backend",
+      "projectPath": "C:\\Users\\Diogo\\Documents\\ProjetoIndra\\Backend\\Backend.csproj",
+      "packagesPath": "C:\\Users\\Diogo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Diogo\\Documents\\ProjetoIndra\\Backend\\obj\\",
+>>>>>>> 060f3b4a16dfb0d3551e39f9a1ed31e6c3e28a55
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Diogo\\AppData\\Roaming\\NuGet\\NuGet.Config",

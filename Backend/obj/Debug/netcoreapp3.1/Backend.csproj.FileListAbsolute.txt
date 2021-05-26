@@ -44,6 +44,7 @@ C:\Users\Diogo\Documents\ProjetoIndra\Backend\obj\Debug\netcoreapp3.1\Backend.dl
 C:\Users\Diogo\Documents\ProjetoIndra\Backend\obj\Debug\netcoreapp3.1\Backend.pdb
 C:\Users\Diogo\Documents\ProjetoIndra\Backend\obj\Debug\netcoreapp3.1\Backend.genruntimeconfig.cache
 C:\Users\Diogo\Documents\ProjetoIndra\Backend\bin\Debug\netcoreapp3.1\Backend.xml
+<<<<<<< HEAD
 C:\Users\Diogo\Documents\ProjetoIndra\CrudLivrosBackend\Backend\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Diogo\Documents\ProjetoIndra\CrudLivrosBackend\Backend\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Diogo\Documents\ProjetoIndra\CrudLivrosBackend\Backend\bin\Debug\netcoreapp3.1\Backend.exe
@@ -136,3 +137,5 @@ C:\Users\Diogo\Documents\Development\ProjetoIndra\CrudLivrosBackend\Backend\obj\
 C:\Users\Diogo\Documents\Development\ProjetoIndra\CrudLivrosBackend\Backend\obj\Debug\netcoreapp3.1\Backend.dll
 C:\Users\Diogo\Documents\Development\ProjetoIndra\CrudLivrosBackend\Backend\obj\Debug\netcoreapp3.1\Backend.pdb
 C:\Users\Diogo\Documents\Development\ProjetoIndra\CrudLivrosBackend\Backend\obj\Debug\netcoreapp3.1\Backend.genruntimeconfig.cache
+=======
+>>>>>>> 060f3b4a16dfb0d3551e39f9a1ed31e6c3e28a55

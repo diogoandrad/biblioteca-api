@@ -5,7 +5,11 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+<<<<<<< HEAD
     <DocumentationFile>C:\Users\Diogo\Documents\Development\ProjetoIndra\CrudLivrosBackend\Backend\Backend.xml</DocumentationFile>
+=======
+    <DocumentationFile>C:\Users\Diogo\Documents\ProjetoIndra\Backend\Backend.xml</DocumentationFile>
+>>>>>>> 060f3b4a16dfb0d3551e39f9a1ed31e6c3e28a55
   </PropertyGroup>
 
   <ItemGroup>

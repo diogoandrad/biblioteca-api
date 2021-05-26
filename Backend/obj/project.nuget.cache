@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "cU6fGcfYjDXNVACB1awm65ylX5/Z+YjSgF8EVbTt78ueDDSMG1htrkxHHXoGj/9wPA+FwxzzQSoVL9uKSG+cYQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Diogo\\Documents\\Development\\ProjetoIndra\\CrudLivrosBackend\\Backend\\Backend.csproj",
+=======
+  "dgSpecHash": "ND8D2XU56iUr4K+C9rqAAn0rJkCDc+LgyT4QUxnftpTNsZnCw5OdWPANf/Cl+mjjMVYr0DOn9AoES3e7QRfXYA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Diogo\\Documents\\ProjetoIndra\\Backend\\Backend.csproj",
+>>>>>>> 060f3b4a16dfb0d3551e39f9a1ed31e6c3e28a55
   "expectedPackageFiles": [
     "C:\\Users\\Diogo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Diogo\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
