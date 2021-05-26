@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using BIBLIOTECA.API.Models;
+using BIBLIOTECA.Domain.Entities;
+using BIBLIOTECA.Application.Interfaces;
+using BIBLIOTECA.Infrastructure.DataContext;
 
-namespace BIBLIOTECA.API.Services
+namespace BIBLIOTECA.Application.Services
 {
     public class BookService : IBookService
     {

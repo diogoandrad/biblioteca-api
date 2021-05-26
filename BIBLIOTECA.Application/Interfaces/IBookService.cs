@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BIBLIOTECA.API.Models;
+using BIBLIOTECA.Domain.Entities;
 
-namespace BIBLIOTECA.API.Services
+namespace BIBLIOTECA.Application.Interfaces
 {
     public interface IBookService
     {
