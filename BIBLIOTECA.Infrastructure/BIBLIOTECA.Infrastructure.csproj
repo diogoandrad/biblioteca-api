@@ -19,8 +19,4 @@
 	<ProjectReference Include="..\BIBLIOTECA.Domain\BIBLIOTECA.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Mappings\" />
-  </ItemGroup>
-
 </Project>

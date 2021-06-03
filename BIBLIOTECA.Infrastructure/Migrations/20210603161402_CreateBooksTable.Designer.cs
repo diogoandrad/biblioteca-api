@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BIBLIOTECA.Infrastructure.Migrations
 {
     [DbContext(typeof(BookContext))]
-    [Migration("20210526235554_CreateBooksTable")]
+    [Migration("20210603161402_CreateBooksTable")]
     partial class CreateBooksTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,33 +24,39 @@ namespace BIBLIOTECA.Infrastructure.Migrations
             modelBuilder.Entity("BIBLIOTECA.Domain.Entities.Book", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
+                        .HasColumnType("uuid")
+                        .HasColumnName("id");
 
                     b.Property<string>("Authors")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("text")
+                        .HasColumnName("authors");
 
                     b.Property<string>("Caption")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("text")
+                        .HasColumnName("caption");
 
                     b.Property<int>("Pages")
-                        .HasColumnType("integer");
+                        .HasColumnType("integer")
+                        .HasColumnName("pages");
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("text")
+                        .HasColumnName("title");
 
                     b.Property<double>("Version")
-                        .HasColumnType("double precision");
+                        .HasColumnType("double precision")
+                        .HasColumnName("version");
 
                     b.Property<int>("Year")
-                        .HasColumnType("integer");
+                        .HasColumnType("integer")
+                        .HasColumnName("year");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Books");
+                    b.ToTable("books");
                 });
 #pragma warning restore 612, 618
         }

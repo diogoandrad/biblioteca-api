@@ -9,8 +9,4 @@
 	<ProjectReference Include="..\BIBLIOTECA.Infrastructure\BIBLIOTECA.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="AutoMapper\" />
-  </ItemGroup>
-
 </Project>
