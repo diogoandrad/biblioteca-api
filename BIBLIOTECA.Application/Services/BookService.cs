@@ -11,22 +11,22 @@ namespace BIBLIOTECA.Application.Services
 {
     public class BookService : IBookService
     {
-        BookContext dbContext;
+        private readonly BookContext _context;
 
-        public BookService(BookContext _bookItems)
+        public BookService(BookContext context)
         {
-            dbContext = _bookItems;
+            _context = context;
         }
 
         public IEnumerable<Book> GetBooks()
         {
-            var book = dbContext.Books.ToList();
+            var book = _context.Books.ToList();
             return book;
         }
 
         public Book GetById(Guid id)
         {
-            var book = dbContext.Books.FirstOrDefault(x => x.Id == id);
+            var book = _context.Books.FirstOrDefault(x => x.Id == id);
             return book;
         }
 
@@ -35,8 +35,8 @@ namespace BIBLIOTECA.Application.Services
             if (book != null)
             {
                 book.Id = Guid.NewGuid();
-                dbContext.Books.Add(book);
-                dbContext.SaveChanges();
+                _context.Books.Add(book);
+                _context.SaveChanges();
                 return book;
             }
             return null;
@@ -45,16 +45,16 @@ namespace BIBLIOTECA.Application.Services
         public Book UpdateBook(Guid id, Book book)
         {
             book.Id = id;
-            dbContext.Books.Update(book);
-            dbContext.SaveChanges();
+            _context.Books.Update(book);
+            _context.SaveChanges();
             return book;
         }
 
         public Guid DeleteBook(Guid id)
         {
-            var book = dbContext.Books.FirstOrDefault(x => x.Id == id);
-            dbContext.Entry(book).State = EntityState.Deleted;
-            dbContext.SaveChanges();
+            var book = _context.Books.FirstOrDefault(x => x.Id == id);
+            _context.Entry(book).State = EntityState.Deleted;
+            _context.SaveChanges();
             return id;
         }
     }
