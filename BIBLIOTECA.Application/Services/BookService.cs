@@ -1,61 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
 using BIBLIOTECA.Domain.Entities;
 using BIBLIOTECA.Application.Interfaces;
 using BIBLIOTECA.Infrastructure.DataContext;
+using BIBLIOTECA.Infrastructure.Repositories;
 
 namespace BIBLIOTECA.Application.Services
 {
     public class BookService : IBookService
     {
-        private readonly BookContext _context;
+        private readonly BookRepository _bookRepository;
 
         public BookService(BookContext context)
         {
-            _context = context;
+            _bookRepository = new BookRepository(context);
         }
 
-        public IEnumerable<Book> GetBooks()
+        public IEnumerable<Book> GetAll()
         {
-            var book = _context.Books.ToList();
-            return book;
+            return _bookRepository.GetAll();
         }
 
         public Book GetById(Guid id)
         {
-            var book = _context.Books.FirstOrDefault(x => x.Id == id);
-            return book;
+            return _bookRepository.GetById(id);
         }
 
-        public Book AddBook(Book book)
+        public Book Create(Book book)
         {
-            if (book != null)
-            {
-                book.Id = Guid.NewGuid();
-                _context.Books.Add(book);
-                _context.SaveChanges();
-                return book;
-            }
-            return null;
+            return _bookRepository.Create(book);
         }
 
-        public Book UpdateBook(Guid id, Book book)
+        public Book Update(Guid id, Book book)
         {
-            book.Id = id;
-            _context.Books.Update(book);
-            _context.SaveChanges();
-            return book;
+            return _bookRepository.Update(id, book);
         }
 
-        public Guid DeleteBook(Guid id)
+        public Guid Delete(Guid id)
         {
-            var book = _context.Books.FirstOrDefault(x => x.Id == id);
-            _context.Entry(book).State = EntityState.Deleted;
-            _context.SaveChanges();
-            return id;
+            return _bookRepository.Delete(id);
         }
     }
 }

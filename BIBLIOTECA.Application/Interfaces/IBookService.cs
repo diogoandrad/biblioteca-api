@@ -6,10 +6,10 @@ namespace BIBLIOTECA.Application.Interfaces
 {
     public interface IBookService
     {
-        public IEnumerable<Book> GetBooks();
+        public IEnumerable<Book> GetAll();
         public Book GetById(Guid id);
-        public Book AddBook(Book book);
-        public Book UpdateBook(Guid id, Book book);
-        public Guid DeleteBook(Guid id);
+        public Book Create(Book book);
+        public Book Update(Guid id, Book book);
+        public Guid Delete(Guid id);
     }
 }
