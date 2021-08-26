@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using BIBLIOTECA.Domain.Entities;
-using BIBLIOTECA.Application.Interfaces;
+using BIBLIOTECA.Application.Services;
 
 namespace BIBLIOTECA.API.Controllers
 {
@@ -10,9 +10,9 @@ namespace BIBLIOTECA.API.Controllers
     [Route("api/[controller]")]
     public class BookController : ControllerBase
     {
-        private readonly IBookService _bookService;
+        private readonly BookService _bookService;
 
-        public BookController(IBookService service)
+        public BookController(BookService service)
         {
             _bookService = service;
         }
@@ -32,22 +32,19 @@ namespace BIBLIOTECA.API.Controllers
         [HttpPost]
         public ActionResult<Book> Create(Book book)
         {
-            _bookService.Create(book);
-            return book;
+            return _bookService.Create(book);
         }
 
-        [HttpPut("{id}")]
-        public ActionResult<Book> Update(Guid id, Book book)
+        [HttpPut]
+        public ActionResult<Book> Update(Book book)
         {
-            _bookService.Update(id, book);
-            return book;
+            return _bookService.Update(book);
         }
 
         [HttpDelete("{id}")]
         public ActionResult<Guid> Delete(Guid id)
         {
-            _bookService.Delete(id);
-            return id;
+            return _bookService.Delete(id);
         }
     }
 }

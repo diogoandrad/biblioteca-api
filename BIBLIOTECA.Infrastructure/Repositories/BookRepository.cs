@@ -4,10 +4,11 @@ using System.Linq;
 using BIBLIOTECA.Infrastructure.DataContext;
 using BIBLIOTECA.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using BIBLIOTECA.Application.IRepositories;
 
 namespace BIBLIOTECA.Infrastructure.Repositories
 {
-    public class BookRepository
+    public class BookRepository : IBookRepository
     {
         private readonly BookContext _context;
 
@@ -21,23 +22,21 @@ namespace BIBLIOTECA.Infrastructure.Repositories
             return _context.Books.AsNoTracking().ToList();
         }
 
-        public virtual Book GetById(Guid id)
+        public Book GetById(Guid id)
         {
             return _context.Books.AsNoTracking().FirstOrDefault(x => x.Id == id);
         }
 
         public Book Create(Book book)
         {
-            book.Id = Guid.NewGuid();
             _context.Books.Add(book);
             _context.SaveChanges();
             return book;
         }
 
-        public Book Update(Guid id, Book book)
+        public Book Update(Book book)
         {
-            book.Id = id;
-            _context.Books.Update(book);
+            _context.Entry(book).State = EntityState.Modified;
             _context.SaveChanges();
             return book;
         }
@@ -45,7 +44,7 @@ namespace BIBLIOTECA.Infrastructure.Repositories
         public Guid Delete(Guid id)
         {
             var book = GetById(id);
-            _context.Set<Book>().Remove(book);
+            _context.Books.Remove(book);
             _context.SaveChanges();
             return id;
         }

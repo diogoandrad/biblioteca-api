@@ -5,9 +5,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
-using BIBLIOTECA.Application.Interfaces;
-using BIBLIOTECA.Application.Services;
+using BIBLIOTECA.Application.IRepositories;
 using BIBLIOTECA.Infrastructure.DataContext;
+using BIBLIOTECA.Infrastructure.Repositories;
+using BIBLIOTECA.Application.Services;
 
 namespace BIBLIOTECA.API
 {
@@ -35,7 +36,8 @@ namespace BIBLIOTECA.API
 
             // Conection Entity Framework with Postgres SQL
             services.AddDbContext<BookContext>(options => options.UseNpgsql(Configuration["DbConnection"]));
-            services.AddTransient<IBookService, BookService>();
+            services.AddScoped<IBookRepository, BookRepository>();
+            services.AddScoped<BookService, BookService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

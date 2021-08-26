@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using BIBLIOTECA.Domain.Entities;
-using BIBLIOTECA.Application.Interfaces;
-using BIBLIOTECA.Infrastructure.DataContext;
-using BIBLIOTECA.Infrastructure.Repositories;
+using BIBLIOTECA.Application.IRepositories;
 
 namespace BIBLIOTECA.Application.Services
 {
-    public class BookService : IBookService
+    public class BookService
     {
-        private readonly BookRepository _bookRepository;
+        private readonly IBookRepository _bookRepository;
 
-        public BookService(BookContext context)
+        public BookService(IBookRepository bookRepository)
         {
-            _bookRepository = new BookRepository(context);
+            _bookRepository = bookRepository;
         }
 
         public IEnumerable<Book> GetAll()
@@ -31,9 +29,9 @@ namespace BIBLIOTECA.Application.Services
             return _bookRepository.Create(book);
         }
 
-        public Book Update(Guid id, Book book)
+        public Book Update(Book book)
         {
-            return _bookRepository.Update(id, book);
+            return _bookRepository.Update(book);
         }
 
         public Guid Delete(Guid id)

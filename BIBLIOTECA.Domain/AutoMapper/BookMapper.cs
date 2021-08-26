@@ -8,7 +8,7 @@ namespace BIBLIOTECA.Domain.AutoMapper
     {
         public BookMapper()
         {
-            CreateMap<BookDto, Book>()
+            CreateMap<Book, BookDto>()
                 .ReverseMap();
         }
     }
